@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.lang.*;
+public class PascalTriangle{
+  public static void main(String[] arg){
+    System.out.println("Enter a positive integer n");
+    int a = new Scanner(System.in).nextInt();
+    triangle(a);
+  }
+  public static void triangle(int n){
+    if(n<0){
+      throw new ArithmeticException("Please enter a natural number"); 
+    }
+   
+    if(n == 0){
+      System.out.println(1);
+    }
+    if(n == 1){
+      System.out.println(1+ " "+(n+1) +" "+ 1);
+    }
+    if(n>1){
+     System.out.println(n);
+      triangle(n-1);
+    }
+}
+
+}
+  
